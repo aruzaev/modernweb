@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Filter Ongoing Courses
+  body
+    h1 Filter Ongoing Courses
+    br
+    a(href="/") Home
+    br
+    form(action="/courses/filter" method="post")
+      label(for="id") Course ID:
+      input(type="text" name="id")
+      br
+      label(for="name") Course Name:
+      input(type="text" name="name")
+      br
+      label(for="department") Department:
+      input(type="text" name="department")
+      br
+      label(for="isOpen") Is Course Open (has seats left)?
+      input(type="checkbox" name="isOpen")
+      br
+      button(type="submit") Filter Courses
+    br
+    a(href="/courses") Back to Courses List

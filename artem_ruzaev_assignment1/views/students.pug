@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title Students List
+  body
+    h1 Students List
+    ul
+      each student in students
+        li
+          a(href=`/students/${student.id}`) #{student.name} (#{student.department})
+    br
+    a(href="/") Go Home

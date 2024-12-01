@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= student.name
+  body
+    h1= student.name
+    p Student ID : #{student.id}
+    p Department: #{student.department}
+    p Semester: #{student.semester}
+    h2 Enrolled Courses
+    ul
+      each course in student.enrolledCourses
+        li #{course.name} (#{course.department})
+    h2 Completed Courses
+    ul
+      each course in student.completedCourses
+        li #{course.name} - Grade: #{course.grade}
+    p Average Grade: #{avgGrade}
+    br
+    a(href="/students") Go Back to Students List

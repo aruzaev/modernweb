@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Generate Random Image
+  form(action="/generate-image" method="POST")
+    label(for="height") Height:
+    input(type="number" id="height" name="height" required)
+    br
+    label(for="width") Width:
+    input(type="number" id="width" name="width" required)
+    br
+    label(for="blur") Blur (0-10):
+    input(type="number" id="blur" name="blur" min="0" max="10")
+    br
+    label(for="grayscale") Grayscale:
+    input(type="checkbox" id="grayscale" name="grayscale")
+    br
+    button(type="submit") Generate Image
+  if imageUrl
+    h2 Generated Image
+    img(src=imageUrl alt="Generated Image")

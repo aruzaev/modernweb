@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Ongoing Courses
+  body
+    h1 Ongoing Courses
+    ul
+      each course in ongoingCourses
+        li ID: #{course.id} #{course.name} (#{course.department}) - #{course.remainingSeats} seats left
+    br
+    a(href="/") Go Home

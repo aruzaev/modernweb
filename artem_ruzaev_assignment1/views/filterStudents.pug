@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Filter Students
+  body
+    h1 Filter Students
+    br
+    a(href="/") Home
+    br
+    form(action="/students/filter" method="post")
+      label(for="id") Student ID:
+      input(type="text" name="id")
+      br
+      label(for="name") Student Name:
+      input(type="text" name="name")
+      br
+      label(for="department") Department:
+      input(type="text" name="department")
+      br
+      label(for="enrolledCourse") Enrolled Course:
+      input(type="text" name="enrolledCourse")
+      br
+      label(for="completedCourse") Completed Course:
+      input(type="text" name="completedCourse")
+      br
+      button(type="submit") Filter Students
+    br
+    a(href="/students") Back to Students List
